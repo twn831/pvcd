@@ -4,9 +4,6 @@ import { uploadFile } from "@/lib/r2";
 import { createFile } from "@/lib/db";
 import { normalizePath, joinPath, getFileType } from "@/lib/utils";
 
-export const runtime = "nodejs";
-export const maxDuration = 60;
-
 export async function POST(request: NextRequest) {
   try {
     if (!(await isAuthenticated())) {
